@@ -1,7 +1,7 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
+    var html = '<div class="coffee card" >';
     // html += '<td>' + coffee.id + '</td>';
     html += '<div>' + '<h3>' + coffee.name + '</h3>' + '<p>' + coffee.roast + '</p>' + '</div>';
     // html += '<p>' + coffee.roast + '</p>';
@@ -50,6 +50,27 @@ var coffeeInput1 = document.querySelector('#firstCoffeeInput');
 coffeeInput1.addEventListener('input', updateCoffeesUserInput)
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
+
+function addNewCoffee () {
+    var newUserInput = coffeeInput2.value;
+    var customRoastInput = newRoastInput.value;
+    var customCoffeeObject = {name: newUserInput, roast: customRoastInput};
+    coffees.push(customCoffeeObject);
+    tbody.innerHTML = renderCoffees(coffees);
+}
+
+var coffeeInput2 = document.querySelector('#secondCoffeeInput');
+var newRoastInput = document.querySelector('#roast-selection2');
+
+/*var number = [];
+
+function myFunction()
+{
+    var x = document.getElementById("box");
+    number.push(document.getElementById("input").value);
+    x.innerHTML = number.join('<br/>');
+}*/
+
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
@@ -70,7 +91,10 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var submitButton2 = document.querySelector('#submit2');
+
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+submitButton2.addEventListener('click', addNewCoffee);

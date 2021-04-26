@@ -60,7 +60,7 @@ function addNewCoffee () {
 }
 
 var coffeeInput2 = document.querySelector('#secondCoffeeInput');
-var newRoastInput = document.querySelector('#roast-selection2');
+var newRoastInput = document.querySelector('#roastselection2');
 
 /*var number = [];
 

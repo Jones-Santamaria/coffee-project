@@ -9,7 +9,8 @@ td, th {
 }
 
 .bg-coffee {
-    background-image: url("img/coffee.jpeg");
+    background: url("img/coffee.jpeg") center center;
+    display: flex;
     background-size: cover;
 }
 
@@ -18,4 +19,8 @@ td, th {
     width: 100%;
     text-align: center;
     opacity: .5;
+}
+#jumbotron{
+    padding-left: 0;
+    padding-right: 0;
 }

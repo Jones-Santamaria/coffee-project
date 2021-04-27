@@ -1,5 +1,5 @@
 "use strict"
-
+//Changed from table to <div>. Added styling and made <div> into cards//
 function renderCoffee(coffee) {
     var html = '<div class="coffee card col-4 m-2 d-flex bg-dark text-light" >';
     // html += '<td>' + coffee.id + '</td>';
@@ -9,7 +9,7 @@ function renderCoffee(coffee) {
 
     return html;
 }
-
+//This function runs throughout the page. It displays what coffees are available based on user input.
 function renderCoffees(coffees) {
     var html = '';
     for(var i = 0; i < coffees.length; i++) {
@@ -22,10 +22,10 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
-    if(roastSelection.value === "All") {
+    if(roastSelection.value === "All") { //This if statement is the select all coffee roast.
         filteredCoffees = coffees;
     } else {
-        coffees.forEach(function (coffee) {
+        coffees.forEach(function (coffee) { //This function displays coffee based on roast chosen by user. It pushed the coffees to a new array and only displays the new array.
             if (coffee.roast === selectedRoast) {
                 filteredCoffees.push(coffee);
             }
@@ -33,13 +33,14 @@ function updateCoffees(e) {
     }
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
-
+var submitButton = document.querySelector('#submit');
+submitButton.addEventListener('click', updateCoffees); //Runs updates coffee when clicked.
 function updateCoffeesUserInput(e) {
     e.preventDefault();
-    var userInput = coffeeInput1.value.toLowerCase()
+    var userInput = coffeeInput1.value.toLowerCase() // Takes user input from #firstCoffeeInput and puts into lower case. query selector for this is online 50
     var userCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.name.toLowerCase().includes(userInput)){
+        if (coffee.name.toLowerCase().includes(userInput)){ //code for searching through coffee object. Event listener is on line 50.
             userCoffees.push(coffee);
         }
     });
@@ -52,24 +53,17 @@ coffeeInput1.addEventListener('input', updateCoffeesUserInput)
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 
 function addNewCoffee () {
-    var newUserInput = coffeeInput2.value;
-    var customRoastInput = newRoastInput.value;
+    var newUserInput = coffeeInput2.value;//query selector on line 63.
+    var customRoastInput = newRoastInput.value;//query selector on line 64.
     var customCoffeeObject = {name: newUserInput, roast: customRoastInput, price: '$5.00/lbs.'};
-    coffees.push(customCoffeeObject);
+    coffees.push(customCoffeeObject); //pushes into from like 57 into coffee object.
     tbody.innerHTML = renderCoffees(coffees);
 }
 
 var coffeeInput2 = document.querySelector('#secondCoffeeInput');
 var newRoastInput = document.querySelector('#roastselection2');
-
-/*var number = [];
-
-function myFunction()
-{
-    var x = document.getElementById("box");
-    number.push(document.getElementById("input").value);
-    x.innerHTML = number.join('<br/>');
-}*/
+var submitButton2 = document.querySelector('#submit2');
+submitButton2.addEventListener('click', addNewCoffee);
 
 var coffees = [
     {id: 1, name: 'Light City', roast: 'Light', price:'$2.00/lbs.'},
@@ -89,12 +83,11 @@ var coffees = [
 ];
 
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-var submitButton2 = document.querySelector('#submit2');
+
 
 
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
-submitButton2.addEventListener('click', addNewCoffee);
+
+

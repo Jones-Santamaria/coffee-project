@@ -25,7 +25,7 @@ function updateCoffees(e) {
     if(roastSelection.value === "All") { //This if statement is the select all coffee roast.
         filteredCoffees = coffees;
     } else {
-        coffees.forEach(function (coffee) { //This function displays coffee based on roast chosen by user. It pushed the coffees to a new array and only displays the new array.
+        coffees.forEach(function (coffee) { //This function displays coffee based on roast chosen by user.
             if (coffee.roast === selectedRoast) {
                 filteredCoffees.push(coffee);
             }
@@ -35,9 +35,10 @@ function updateCoffees(e) {
 }
 var submitButton = document.querySelector('#submit');
 submitButton.addEventListener('click', updateCoffees); //Runs updates coffee when clicked.
+
 function updateCoffeesUserInput(e) {
     e.preventDefault();
-    var userInput = coffeeInput1.value.toLowerCase() // Takes user input from #firstCoffeeInput and puts into lower case. query selector for this is online 50
+    var userInput = coffeeInput1.value.toLowerCase() // Takes user input from #firstCoffeeInput and puts into lower case. query selector for this is online 50.
     var userCoffees = [];
     coffees.forEach(function(coffee) {
         if (coffee.name.toLowerCase().includes(userInput)){ //code for searching through coffee object. Event listener is on line 50.
@@ -46,13 +47,12 @@ function updateCoffeesUserInput(e) {
     });
     tbody.innerHTML = renderCoffees(userCoffees);
 }
-
 var coffeeInput1 = document.querySelector('#firstCoffeeInput');
 coffeeInput1.addEventListener('input', updateCoffeesUserInput)
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 
-function addNewCoffee () {
+function addNewCoffee () { //function runs when second submit button is clicked. Selector/listener on lines 65 & 66.
     var newUserInput = coffeeInput2.value;//query selector on line 63.
     var customRoastInput = newRoastInput.value;//query selector on line 64.
     var customCoffeeObject = {name: newUserInput, roast: customRoastInput, price: '$5.00/lbs.'};
@@ -84,8 +84,6 @@ var coffees = [
 
 var tbody = document.querySelector('#coffees');
 var roastSelection = document.querySelector('#roast-selection');
-
-
 
 tbody.innerHTML = renderCoffees(coffees);
 

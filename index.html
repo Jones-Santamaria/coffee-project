@@ -7,8 +7,10 @@
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/54ed633ccb.js" crossorigin="anonymous"></script><!--My font awesome for social buttons-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
-<body>
+<body style="font-family: 'Montserrat', sans-serif;">
 <!--NAV BAR-->
 <div class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -64,10 +66,10 @@
             <div class="dropdown">
                 <label for="roast-selection"></label>
                 <select id="roast-selection" class="form-control">
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                    <option selected>all</option>
+                    <option>Light</option>
+                    <option>Medium</option>
+                    <option>Dark</option>
+                    <option selected>All</option>
                 </select>
             </div>
         </form>
@@ -75,7 +77,7 @@
             <h4>Coffee Name</h4>
             <input type="text" class="form-control" id="firstCoffeeInput">
         </div>
-        <div>
+        <div class="mt-2">
             <button class="btn btn-dark" id="submit" type="submit">Submit</button>
         </div>
         <div class="mt-5">
@@ -88,9 +90,9 @@
                 <div class="dropdown">
                     <label for="roastselection2"></label>
                     <select id="roastselection2" class="form-control">
-                        <option>light</option>
-                        <option>medium</option>
-                        <option>dark</option>
+                        <option>Light</option>
+                        <option>Medium</option>
+                        <option>Dark</option>
                     </select>
                 </div>
             </form>
@@ -99,13 +101,13 @@
             <h4>Name</h4>
             <input type="text" class="form-control" id="secondCoffeeInput">
         </div>
-        <div class="mb-4">
+        <div class="mt-2">
             <button class="btn btn-dark" id="submit2" type="submit">Submit</button>
         </div>
     </div>
 </div>
 
-<footer class="bg-dark text-center text-white">
+<footer class="bg-dark text-center text-white mt-3">
     <!-- Grid container -->
     <div class="container p-4 pb-0">
         <!-- Section: Social media -->

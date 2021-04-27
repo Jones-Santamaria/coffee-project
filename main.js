@@ -1,9 +1,9 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee card col-4 bg-dark text-light" >';
+    var html = '<div class="coffee card col-4 m-2 bg-dark text-light" >';
     // html += '<td>' + coffee.id + '</td>';
-    html += '<div>' + '<h3>' + coffee.name + '</h3>' + '<p>' + coffee.roast + '</p>' + coffee.price + '</div>';
+    html += '<div>' + '<h3>' + coffee.name + '</h3>' + '<p>' + coffee.roast + '</p>' + '<div class="d-flex justify-content-end">' + coffee.price + '</div>' + '</div>';
     // html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
 
@@ -54,7 +54,7 @@ coffeeInput1.addEventListener('input', updateCoffeesUserInput)
 function addNewCoffee () {
     var newUserInput = coffeeInput2.value;
     var customRoastInput = newRoastInput.value;
-    var customCoffeeObject = {name: newUserInput, roast: customRoastInput};
+    var customCoffeeObject = {name: newUserInput, roast: customRoastInput, price: '$5.00/lbs.'};
     coffees.push(customCoffeeObject);
     tbody.innerHTML = renderCoffees(coffees);
 }
@@ -72,20 +72,20 @@ function myFunction()
 }*/
 
 var coffees = [
-    {id: 1, name: 'Light City', roast: 'light', price:'$3.00/lbs.'},
-    {id: 2, name: 'Half City', roast: 'light'},
-    {id: 3, name: 'Cinnamon', roast: 'light'},
-    {id: 4, name: 'City', roast: 'medium'},
-    {id: 5, name: 'American', roast: 'medium'},
-    {id: 6, name: 'Breakfast', roast: 'medium'},
-    {id: 7, name: 'High', roast: 'dark'},
-    {id: 8, name: 'Continental', roast: 'dark'},
-    {id: 9, name: 'New Orleans', roast: 'dark'},
-    {id: 10, name: 'European', roast: 'dark'},
-    {id: 11, name: 'Espresso', roast: 'dark'},
-    {id: 12, name: 'Viennese', roast: 'dark'},
-    {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
+    {id: 1, name: 'Light City', roast: 'Light', price:'$2.00/lbs.'},
+    {id: 2, name: 'Half City', roast: 'Light', price:'$2.00/lbs.'},
+    {id: 3, name: 'Cinnamon', roast: 'Light', price:'$2.00/lbs.'},
+    {id: 4, name: 'City', roast: 'Medium', price:'$3.00/lbs.'},
+    {id: 5, name: 'American', roast: 'Medium', price:'$3.00/lbs.'},
+    {id: 6, name: 'Breakfast', roast: 'Medium', price:'$3.00/lbs.'},
+    {id: 7, name: 'High', roast: 'Dark', price:'$4.00/lbs.'},
+    {id: 8, name: 'Continental', roast: 'Dark', price:'$4.00/lbs.'},
+    {id: 9, name: 'New Orleans', roast: 'Dark', price:'$4.00/lbs.'},
+    {id: 10, name: 'European', roast: 'Dark', price:'$4.00/lbs.'},
+    {id: 11, name: 'Espresso', roast: 'Dark', price:'$4.00/lbs.'},
+    {id: 12, name: 'Viennese', roast: 'Dark', price:'$4.00/lbs.'},
+    {id: 13, name: 'Italian', roast: 'Dark', price:'$4.00/lbs.'},
+    {id: 14, name: 'French', roast: 'Dark', price:'$4.00/lbs.'},
 ];
 
 var tbody = document.querySelector('#coffees');

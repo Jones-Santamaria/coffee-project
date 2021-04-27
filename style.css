@@ -1,13 +1,16 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+body{
+    background-color: lightgray;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+#navBarName{
+    font-weight: bolder;
+    font-size: x-large;
+    font-family: 'New Rocker', cursive;
 }
 
+#coffeewelcome{
+    font-family: 'Josefin Sans', sans-serif;
+}
 .bg-coffee {
     background: url("img/coffee.jpeg") center center;
     display: flex;
@@ -24,6 +27,7 @@ td, th {
     padding-left: 0;
     padding-right: 0;
 }
+
 .icons{
     margin: 2px;
 }
@@ -31,4 +35,5 @@ td, th {
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
-
+.navbar{
+}

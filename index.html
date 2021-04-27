@@ -9,12 +9,14 @@
     <script src="https://kit.fontawesome.com/54ed633ccb.js" crossorigin="anonymous"></script><!--My font awesome for social buttons-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
 </head>
 <body class="px-3" style="font-family: 'Montserrat', sans-serif;">
 <!--NAV BAR-->
 <div id="navbar" class="container-fluid">
-    <nav class="navbar navbar-expand-lg px-0 navbar-light bg-light">
-        <a class="navbar-brand" href="#">The Heavy Metal Coffee House</a>
+    <nav class="navbar navbar-expand-lg px-0 navbar-light">
+        <a id="navBarName" class="navbar-brand" href="#">The Heavy Metal Coffee House</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -22,17 +24,17 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#coffees">Brews <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#coffees">Brews</a>
-                </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="#googlemap">Location</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#socialmediaicons">Connect</a>
                 </li>
             </ul>
             <span class="navbar-text d-flex align-items-center">
-                What we are listening to right now -
+                Currently Listening to -
       <iframe src="https://open.spotify.com/embed/track/01Mpj13vURSO3cCLprPt5T" width="250" height="80" frameborder="0"
               allowtransparency="true" allow="encrypted-media"></iframe>
     </span>
@@ -43,7 +45,7 @@
 <div class="container-fluid px-0">
     <div id="jumbotron" class="jumbotron px-0 d-flex justify-content-center bg-coffee">
         <div class="container-fluid px-0">
-            <h1 class="display-3 coffee-welcome">Coffee!</h1>
+            <h1 id="coffeewelcome" class="display-3 coffee-welcome">Welcome!</h1>
         </div>
     </div>
 </div>
@@ -115,44 +117,30 @@
 </div>
 
 <footer class="bg-dark text-center text-white mt-3">
-    <!-- Grid container -->
-    <div class="container-fluid p-4 pb-0">
-        <!-- Section: Social media -->
+    <div id="socialmediaicons" class="container-fluid p-4 pb-0">
         <section class="mb-4">
             <!-- Facebook -->
-            <a class="btn btn-outline-light btn-floating m-1" href="http://Facebook.com" role="button"
-            ><i class="fab fa-facebook-f"></i
-            ></a>
-
+            <a class="btn btn-outline-light btn-floating m-1" href="http://Facebook.com" role="button"><i class="fab fa-facebook-f"></i>
+            </a>
             <!-- Twitter -->
-            <a class="btn btn-outline-light btn-floating m-1" href="http://Twitter.com" role="button"
-            ><i class="fab fa-twitter"></i
-            ></a>
-
+            <a class="btn btn-outline-light btn-floating m-1" href="http://Twitter.com" role="button"><i class="fab fa-twitter"></i>
+            </a>
             <!-- Instagram -->
-            <a class="btn btn-outline-light btn-floating m-1" href="http://Instagram.com" role="button"
-            ><i class="fab fa-instagram"></i
-            ></a>
-
+            <a class="btn btn-outline-light btn-floating m-1" href="http://Instagram.com" role="button"><i class="fab fa-instagram"></i>
+            </a>
             <!-- Linkedin -->
-            <a class="btn btn-outline-light btn-floating m-1" href="http://Linkedin.com" role="button"
-            ><i class="fab fa-linkedin-in"></i
-            ></a>
-
-            <!-- Github -->
+            <a class="btn btn-outline-light btn-floating m-1" href="http://Linkedin.com" role="button"><i class="fab fa-linkedin-in"></i>
+            </a>
+            <!-- Starbucks -->
             <a class="btn btn-outline-light btn-floating m-1" href="http://starbucks.com" role="button"
             ><i class="fas fa-mug-hot"></i>
             </a>
         </section>
-        <!-- Section: Social media -->
     </div>
-    <!-- Grid container -->
-
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: #333333;">
-        © 2021 Copyright: The Heavy Metal Coffee Shop
+        © 2021 Copyright: The Heavy Metal Coffee House
     </div>
-    <!-- Copyright -->
 </footer>
 
 

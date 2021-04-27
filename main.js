@@ -3,7 +3,7 @@
 function renderCoffee(coffee) {
     var html = '<div class="coffee card col-4 bg-dark text-light" >';
     // html += '<td>' + coffee.id + '</td>';
-    html += '<div>' + '<h3>' + coffee.name + '</h3>' + '<p>' + coffee.roast + '</p>' + '</div>';
+    html += '<div>' + '<h3>' + coffee.name + '</h3>' + '<p>' + coffee.roast + '</p>' + coffee.price + '</div>';
     // html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
 
@@ -72,7 +72,7 @@ function myFunction()
 }*/
 
 var coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
+    {id: 1, name: 'Light City', roast: 'light', price:'$3.00/lbs.'},
     {id: 2, name: 'Half City', roast: 'light'},
     {id: 3, name: 'Cinnamon', roast: 'light'},
     {id: 4, name: 'City', roast: 'medium'},

@@ -1,9 +1,9 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee card col-4 m-2 bg-dark text-light" >';
+    var html = '<div class="coffee card col-4 m-2 d-flex bg-dark text-light" >';
     // html += '<td>' + coffee.id + '</td>';
-    html += '<div>' + '<h3>' + coffee.name + '</h3>' + '<p>' + coffee.roast + '</p>' + '<div class="d-flex justify-content-end">' + coffee.price + '</div>' + '</div>';
+    html += '<div>' + '<h3>' + coffee.name + '<i class="fas fa-coffee"></i>' + '</h3>' + '<p>' + coffee.roast + '</p>' + '<div class="d-flex justify-content-end">' + coffee.price + '</div>' + '</div>';
     // html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
 
@@ -22,7 +22,7 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
-    if(roastSelection.value === "all") {
+    if(roastSelection.value === "All") {
         filteredCoffees = coffees;
     } else {
         coffees.forEach(function (coffee) {

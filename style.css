@@ -27,4 +27,8 @@ td, th {
 .icons{
     margin: 2px;
 }
+#navbar{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
 
